@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daan Setu - Contact</title>
+    <link rel="stylesheet" href="contact.css">
+    <!-- Font Awesome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+</head>
+<body>
+        <header class="header">
+        <div class="nav-container">
+            <a href="#home" class="logo">Daan Setu</a>
+            <nav>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="pragya.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="donate.html">Donate Food</a></li>
+                    <li><a href="req.html">Requirements</a></li>
+                    <li><a href="#rewards">Rewards</a></li>
+                    <li><a href="grocery.html">Grocery</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-right">
+                <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">🌙</button>
+                <a href="login.html" class="login-btn">Login</a>
+            </div>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle menu">☰</button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+         <div class="get-in-touch">
+         <i class="fas fa-envelope-open-text"></i>
+         <h2>Get in touch</h2>
+        <p>We're here to help you make a difference. Reach out to us anytime.</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <!-- Contact Form -->
+        <div class="contact-form">
+            <h2 class="form-title">Send us a Message</h2>
+            <form id="contactForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="fullName">Full Name *</label>
+                        <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject *</label>
+                        <input type="text" id="subject" name="subject" placeholder="What's this about?" required>
+                    </div>
+                </div>
+                <div class="form-group full-width">
+                    <label for="message">Message *</label>
+                    <textarea id="message" name="message" placeholder="Tell us how we can help you..." required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="contact-info">
+            <div class="info-card">
+                <h3 class="email-icon">Email Us</h3>
+                <p>hello@daansetu.org</p>
+                <p>support@daansetu.org</p>
+            </div>
+
+            <div class="info-card">
+                <h3 class="phone-icon">Call Us</h3>
+                <p>+91 91166 86813</p>
+                <p>+91 70141 94617</p>
+            </div>
+
+            <div class="info-card">
+                <h3 class="location-icon">Visit Us</h3>
+                <div>Bennett University</div>
+                <div>Greater Noida</div>
+                <div>Uttar Pradesh, 400001</div>
+            </div>
+
+            <!-- <div class="info-card">
+                <h3 class="time-icon">Office Hours</h3>
+                <div>Monday - Friday: 9:00 AM - 6:00 PM</div>
+                <div>Saturday: 10:00 AM - 4:00 PM</div>
+                <div>Sunday: Closed</div>
+            </div> -->
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <h2 class="faq-title">Frequently Asked Questions</h2>
+        <p class="faq-subtitle">Quick answers to common questions about Daan Setu.</p>
+        
+        <div class="faq-items">
+            <div class="faq-item">
+                <div class="faq-question">How quickly can food donations be picked up?</div>
+                <div class="faq-answer">We typically arrange pickups within 2-4 hours of a donation request, depending on location and availability of our partner NGOs.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">What types of food can be donated?</div>
+                <div class="faq-answer">We accept cooked meals, packaged foods, fresh produce, and baked goods. All donations must be fresh, properly stored, and safe for consumption.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Is there any cost for using Daan Setu?</div>
+                <div class="faq-answer">No, our platform is completely free for both donors and NGOs. We're supported by grants and partnerships to keep this service accessible.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="cta-icon">👥</div>
+        <h2 class="cta-title">Still Have Questions?</h2>
+        <p class="cta-subtitle">Our team is always ready to help you make a difference in your community.</p>
+        <button class="cta-btn" onclick="scrollToContact()">Schedule a Call</button>
+    </section>
+     <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">Daan Setu</div>
+            <div class="footer-tagline">Bridging hunger with kindness. Every donation matters, every meal shared creates hope.</div>
+            <div class="footer-links">
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="donate.html">Donate</a>
+            </div>
+            <div class="footer-copyright">
+                © 2025 Daan Setu. Made with <span class="heart"></span> to reduce food waste and feed the hungry.
+            </div>
+        </div>
+    </footer>
+
+    <script src="contact.js"></script>
+</body>
+</html>

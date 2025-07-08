@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery Tracker</title>
+    <link rel="stylesheet" href="grocery.css">
+</head>
+<body>
+     <header class="header">
+        <div class="nav-container">
+            <a href="#home" class="logo">Daan Setu</a>
+            <nav>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="pragya.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="donate.html">Donate Food</a></li>
+                    <li><a href="req.html">Requirements</a></li>
+                    <li><a href="#rewards">Rewards</a></li>
+                    <li><a href="grocery.html" class="active">Grocery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-right">
+                <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">🌙</button>
+                <a href="login.html" class="login-btn">Login</a>
+            </div>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle menu">☰</button>
+        </div>
+    </header>
+    <div class="container">
+        <div class="header1">
+            <div class="title-section">
+                <h1>Grocery Tracker</h1>
+                <div class="cart-icon">🛒</div>
+                <div>
+                    <div class="subtitle">Track your groceries and reduce food waste</div>
+                </div>
+            </div>
+            <button class="add-btn" onclick="openModal()">
+                <span>+</span> Add Grocery Item
+            </button>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon active">📦</div>
+                <div class="stat-number" id="activeCount">3</div>
+                <div class="stat-label">Active Items</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon expiring">⚠️</div>
+                <div class="stat-number" id="expiringCount">0</div>
+                <div class="stat-label">Expiring Soon</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon consumed">✅</div>
+                <div class="stat-number" id="consumedCount">0</div>
+                <div class="stat-label">Consumed</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon donated">💜</div>
+                <div class="stat-number" id="donatedCount">0</div>
+                <div class="stat-label">Donated</div>
+            </div>
+        </div>
+
+        <div class="total-section">
+            <div class="total-cart-icon">🛒</div>
+            <div class="total-amount" id="totalAmount">₹360</div>
+            <div class="total-label">Total Grocery Amount</div>
+        </div>
+
+        <div class="items-list">
+            <div id="itemsList">
+                <!-- Items will be dynamically added here -->
+            </div>
+            <div id="emptyState" class="empty-state" style="display: none;">
+                <div class="empty-state-icon">🛒</div>
+                <p>No grocery items yet. Add your first item!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <h2>Add Grocery Item</h2>
+            <form id="groceryForm">
+                <div class="form-group">
+                    <label for="itemName">Item Name</label>
+                    <input type="text" id="itemName" required>
+                </div>
+                <div class="form-group">
+                    <label for="category">Category</label>
+                    <select id="category" required>
+                        <option value="">Select Category</option>
+                        <option value="dairy">Dairy</option>
+                        <option value="bakery">Bakery</option>
+                        <option value="fruits">Fruits</option>
+                        <option value="vegetables">Vegetables</option>
+                        <option value="meat">Meat</option>
+                        <option value="snacks">Snacks</option>
+                        <option value="beverages">Beverages</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="quantity">Quantity</label>
+                    <input type="number" id="quantity" min="1" required>
+                </div>
+                <div class="form-group">
+                    <label for="amount">Amount (₹)</label>
+                    <input type="number" id="amount" min="0" step="0.01" required>
+                </div>
+                <div class="form-group">
+                    <label for="expiry">Expiry Date</label>
+                    <input type="date" id="expiry" required>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="modal-btn cancel-btn" onclick="closeModal()">Cancel</button>
+                    <button type="submit" class="modal-btn save-btn">Add Item</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

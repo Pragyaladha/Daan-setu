@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help Requirements - NGO Platform</title>
+    <link rel="stylesheet" href="req.css">
+    <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+/>
+</head>
+<body>
+       <header class="header1">
+        <div class="nav-container">
+            <a href="#home" class="logo">Daan Setu</a>
+            <nav>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="pragya.html" >Home</a></li>
+                    <li><a href="about.html" >About Us</a></li>
+                    <li><a href="donate.html">Donate Food</a></li>
+                    <li><a href="req.html"  class="active">Requirements</a></li>
+                    <li><a href="#rewards">Rewards</a></li>
+                    <li><a href="grocery.html">Grocery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-right">
+                <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">🌙</button>
+                <a href="login.html" class="login-btn">Login</a>
+            </div>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle menu">☰</button>
+        </div>
+    </header>
+    <div class="header">
+        <div class="header-icon">  <i class="fas fa-hands-helping"></i></div>
+        <h1><span class="help">Help</span> <span class="requirements">Requirements</span></h1>
+        <p>NGOs can post their requirements and donors can find meaningful ways to help.</p>
+    </div>
+
+    <div class="main-content">
+        <div class="form-section">
+            <div class="form-container">
+                <h2 class="form-title">Post Requirement</h2>
+                
+                <form id="requirementForm">
+                    <div class="form-group">
+                        <label for="ngoName">NGO Name *</label>
+                        <input type="text" id="ngoName" name="ngoName" placeholder="Enter NGO name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contactPerson">Contact Person *</label>
+                        <input type="text" id="contactPerson" name="contactPerson" placeholder="Contact person name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" placeholder="Enter email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone *</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Phone number" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Required Items *</label>
+                        <div class="checkbox-group">
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="food" name="items" value="food">
+                                <label for="food">Food</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="medicines" name="items" value="medicines">
+                                <label for="medicines">Medicines</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="clothes" name="items" value="clothes">
+                                <label for="clothes">Clothes</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="books" name="items" value="books">
+                                <label for="books">Books</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="toys" name="items" value="toys">
+                                <label for="toys">Toys</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="household" name="items" value="household">
+                                <label for="household">Household Essentials</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="money" name="items" value="money">
+                                <label for="household">Money</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="more" name="items" value="more">
+                                <label for="household">More</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="urgency">Urgency Level *</label>
+                        <select id="urgency" name="urgency" required>
+                            <option value="">Select urgency</option>
+                            <option value="high">High Priority</option>
+                            <option value="medium">Medium Priority</option>
+                            <option value="low">Low Priority</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="beneficiaries">Estimated Beneficiaries *</label>
+                        <input type="text" id="beneficiaries" name="beneficiaries" placeholder="e.g., 100 families" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="location">Location *</label>
+                        <textarea id="location" name="location" placeholder="Enter location/address" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="details">Specific Details *</label>
+                        <textarea id="details" name="details" placeholder="Describe your specific requirements" required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Post Requirement</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="requirements-section">
+            <div class="requirements-header">
+                <h2>Current Requirements</h2>
+            </div>
+            <p class="requirements-subtitle">Help these organizations make a difference in their communities.</p>
+
+            <div class="requirement-card">
+                <div class="card-header">
+                    <div>
+                        <h3 class="card-title">Helping Hands Foundation</h3>
+                        <p class="contact-info">Contact: Priya Sharma</p>
+                    </div>
+                    <span class="priority-badge priority-high">High Priority</span>
+                </div>
+                
+                <div class="tags">
+                    <span class="tag">Food</span>
+                    <span class="tag">Medicines</span>
+                </div>
+                
+                <p class="requirement-description">Need food supplies for 200 families affected by recent floods</p>
+                
+                <div class="card-footer">
+                    <div class="card-stats">
+                        <span>👥 200 families</span>
+                        <span>📍 Mumbai, Maharashtra</span>
+                        <span>🕒 2 hours ago</span>
+                    </div>
+                    <button class="contact-btn">Contact NGO</button>
+                </div>
+            </div>
+
+            <div class="requirement-card">
+                <div class="card-header">
+                    <div>
+                        <h3 class="card-title">Care for Children</h3>
+                        <p class="contact-info">Contact: Raj Patel</p>
+                    </div>
+                    <span class="priority-badge priority-medium">Medium Priority</span>
+                </div>
+                
+                <div class="tags">
+                    <span class="tag">Books</span>
+                    <span class="tag">Toys</span>
+                    <span class="tag">Clothes</span>
+                </div>
+                
+                <p class="requirement-description">Educational materials and winter clothes for orphanage children</p>
+                
+                <div class="card-footer">
+                    <div class="card-stats">
+                        <span>👥 50 children</span>
+                        <span>📍 Pune, Maharashtra</span>
+                        <span>🕒 1 day ago</span>
+                    </div>
+                    <button class="contact-btn">Contact NGO</button>
+                </div>
+            </div>
+
+            <div class="requirement-card">
+                <div class="card-header">
+                    <div>
+                        <h3 class="card-title">Senior Care Society</h3>
+                        <p class="contact-info">Contact: Dr. Meera Shah</p>
+                    </div>
+                    <span class="priority-badge priority-high">High Priority</span>
+                </div>
+                
+                <div class="tags">
+                    <span class="tag">Medicines</span>
+                    <span class="tag">Household Essentials</span>
+                </div>
+                
+                <p class="requirement-description">Essential medicines and daily care items for elderly residents</p>
+                
+                <div class="card-footer">
+                    <div class="card-stats">
+                        <span>👥 80 seniors</span>
+                        <span>📍 Delhi</span>
+                        <span>🕒 3 hours ago</span>
+                    </div>
+                    <button class="contact-btn">Contact NGO</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">Daan Setu</div>
+            <div class="footer-tagline">Bridging hunger with kindness. Every donation matters, every meal shared creates hope.</div>
+            <div class="footer-links">
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="donate.html">Donate</a>
+            </div>
+            <div class="footer-copyright">
+                © 2025 Daan Setu. Made with <span class="heart"></span> to reduce food waste and feed the hungry.
+            </div>
+        </div>
+    </footer>
+
+    <script src="req.js"></script>
+</body>
+</html>

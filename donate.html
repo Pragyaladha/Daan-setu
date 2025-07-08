@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Donate with Daan Setu</title>
+  <link rel="stylesheet" href="donate.css" />
+  <link href='https://boxicons.com/icons?s=rounded&w=thin'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+</head>
+
+<body>
+  <header class="header">
+    <div class="nav-container">
+      <a href="#home" class="logo">Daan Setu</a>
+      <nav>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="pragya.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="donate.html" class="active">Donate Food</a></li>
+          <li><a href="req.html">Requirements</a></li>
+          <li><a href="#rewards">Rewards</a></li>
+          <li><a href="grocery.html">Grocery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-right">
+        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">🌙</button>
+        <a href="login.html" class="login-btn">Login</a>
+      </div>
+      <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle menu">☰</button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <div class="hero-section">
+    <div class="gift-icon"><i class="fas fa-gift"></i></div>
+    <h1 class="hero-title">Donate with <span class="highlight">Daan Setu</span></h1>
+    <p class="hero-subtitle">Share your surplus with those in need. Every donation creates hope and builds community.</p>
+  </div>
+
+  <!-- Categories Section -->
+  <div class="categories-section">
+    <h2 class="section-title">What Can You Donate?</h2>
+    <div class="categories-grid">
+      <!-- Category cards here (no changes needed) -->
+    </div>
+  </div>
+
+  <!-- Main Content -->
+    <div class="main-content">
+        <!-- Donation Form -->
+        <div class="form-section">
+            <h2 class="form-title">
+                <span class="icon"><i class="fas fa-gift"></i></span>
+                Donation Form
+            </h2>
+            <form id="donationForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="donorName">Donor Name <span class="required">*</span></label>
+                        <input type="text" id="donorName" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contactNumber">Contact Number <span class="required">*</span></label>
+                        <input type="tel" id="contactNumber" placeholder="Enter your phone number" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address <span class="required">*</span></label>
+                    <input type="email" id="email" placeholder="Enter your email" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="category">Item Category <span class="required">*</span></label>
+                        <select id="category" required>
+                            <option value="">Select category</option>
+                            <option value="Food">Food</option>
+                            <option value="Medicines">Medicines</option>
+                            <option value="Clothes">Clothes</option>
+                            <option value="Books">Books</option>
+                            <option value="Toys">Toys</option>
+                            <option value="Money">Money</option>
+                            <option value="More">More</option>
+                            <option value="Household Essentials">Household Essentials</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="itemName">Item Name <span class="required">*</span></label>
+                        <input type="text" id="itemName" placeholder="e.g. Rice, Medicines, Clothes" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="quantity">Quantity <span class="required">*</span></label>
+                        <input type="text" id="quantity" placeholder="e.g. 5 kg, 20 pieces" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="expiry">Expiry Date (if applicable)</label>
+                        <input type="date" id="expiry">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Pickup Address <span class="required">*</span></label>
+                    <textarea id="address" placeholder="Enter complete pickup address" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="notes">Additional Notes</label>
+                    <textarea id="notes" placeholder="Any special instructions or details"></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Submit Donation</button>
+            </form>
+        </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Recent Donations -->
+      <div class="recent-donations">
+    <h3 class="sidebar-title">
+        <span class="icon" style="color: #ff6b6b;">👥</span>
+        Recent Donations
+    </h3>
+</div>
+
+
+      <!-- Impact Stats -->
+      <div class="impact-stats">
+        <h3 class="sidebar-title">Your Impact Today</h3>
+        <div class="stat-item">
+          <div class="stat-number blue">127</div>
+          <div class="stat-label">People Fed</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number red">45</div>
+          <div class="stat-label">Donations Today</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number blue">23</div>
+          <div class="stat-label">NGOs Helped</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-brand">Daan Setu</div>
+      <div class="footer-tagline">Bridging hunger with kindness. Every donation matters, every meal shared creates hope.</div>
+      <div class="footer-links">
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="donate.html">Donate</a>
+      </div>
+      <div class="footer-copyright">
+        © 2025 Daan Setu. Made with <span class="heart"></span> to reduce food waste and feed the hungry.
+      </div>
+    </div>
+  </footer>
+
+  <script src="donate.js"></script>
+</body>
+</html>
