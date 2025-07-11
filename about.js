@@ -6,7 +6,6 @@
             nextSection.scrollIntoView({ behavior: 'smooth' });
         });
 
-        // Intersection Observer for animations
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
@@ -21,7 +20,6 @@
             });
         }, observerOptions);
 
-        // Observe all cards for staggered animations
         document.querySelectorAll('.value-card, .pillar-card').forEach((card, index) => {
             card.style.opacity = '0';
             card.style.transform = 'translateY(50px)';
@@ -29,7 +27,7 @@
             observer.observe(card);
         });
 
-        // Button hover effects
+
         document.querySelectorAll('.btn').forEach(btn => {
             btn.addEventListener('mouseenter', function() {
                 this.style.transform = 'translateY(-2px) scale(1.05)';
@@ -40,7 +38,7 @@
             });
         });
 
-        // Parallax effect for sections
+
         window.addEventListener('scroll', () => {
             const scrolled = window.pageYOffset;
             const sections = document.querySelectorAll('.section');
