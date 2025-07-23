@@ -30,17 +30,26 @@
             showLoginForm();
         });
 
-        // Handle login form submission
-        loginFormElement.addEventListener('submit', function(e) {
-            e.preventDefault();
-            const email = document.getElementById('loginEmail').value;
-            const password = document.getElementById('loginPassword').value;
-            
-            if (email && password) {
-                alert('Login form submitted!\nEmail: ' + email);
-                // Here you would typically send the data to your server
-            }
-        });
+    // Handle login form submission
+loginFormElement.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const email = document.getElementById('loginEmail').value;
+    const password = document.getElementById('loginPassword').value;
+
+    // Hardcoded admin credentials
+    const adminEmail = "ladhapragya.com";
+    const adminPassword = "admin123";
+
+    if (email === adminEmail && password === adminPassword) {
+        // ✅ Redirect to admin page
+        window.location.href = "admin.html";
+    } else if (email && password) {
+        // ✅ Normal user login
+        alert('Login successful!\nEmail: ' + email);
+        window.location.href = "pragya.html"; // Change to your user home page if different
+    }
+});
+
 
         // Handle signup form submission
         signupFormElement.addEventListener('submit', function(e) {
